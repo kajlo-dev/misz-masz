@@ -1,0 +1,32 @@
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="misz-masz" class="footer-badge">
+      <p>misz&nbsp;–&nbsp;masz<br><span>krainа 1000 i jednego drobiazgu</span></p>
+    </div>
+
+    <div class="footer-col">
+      <span class="footer-label">Znajdziesz nas</span>
+      <p>{{ site.address_line1 }}<br>{{ site.address_line2 }}</p>
+    </div>
+
+    <div class="footer-col">
+      <span class="footer-label">Napisz / zadzwoń</span>
+      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a><br>
+      <a href="tel:{{ site.phone | replace: ' ', '' }}">{{ site.phone_display }}</a></p>
+    </div>
+
+    <div class="footer-col">
+      <span class="footer-label">Menu</span>
+      <p>
+        <a href="{{ '/o-nas/' | relative_url }}">O nas</a><br>
+        <a href="{{ '/dojazd/' | relative_url }}">Dojazd</a><br>
+        <a href="{{ '/galeria/' | relative_url }}">Galeria</a><br>
+        <a href="{{ '/kontakt/' | relative_url }}">Kontakt</a>
+      </p>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© {{ 'now' | date: "%Y" }} misz-masz Iwona Szewczyk. Wszystkie prawa zastrzeżone.</span>
+  </div>
+</footer>
