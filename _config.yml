@@ -14,7 +14,7 @@ address_line1: "Rynek 39"
 address_line2: "22-120 Wojsławice"
 
 # Podmień na swój formspree endpoint (formspree.io) — patrz README.md
-formspree_id: "https://formspree.io/f/TWOJ_ID"
+formspree_id: "https://formspree.io/f/xvzjlaoy"
 
 # Godziny otwarcia pobierane automatycznie z Google Business Profile — patrz README.md
 google_places_api_key: "TWOJ_KLUCZ_API"
