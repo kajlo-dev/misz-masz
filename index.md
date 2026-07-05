@@ -4,6 +4,21 @@ title: Home
 description: "misz-masz — sklep wielobranżowy w Wojsławicach, Rynek 39. Chemia, kosmetyki, ziemia, drobne AGD, GSM i drobiazgi z druku 3D."
 ---
 
+{% assign dzisiaj = "now" | date: "%Y-%m-%d" %}
+{% assign ma_promocje = false %}
+{% for kupon in site.data.promocje %}
+  {% if kupon.wygasa == "" or kupon.wygasa >= dzisiaj %}
+    {% assign ma_promocje = true %}
+  {% endif %}
+{% endfor %}
+
+{% if ma_promocje %}
+<a href="{{ '/promocje/' | relative_url }}" class="promo-banner">
+  <span class="promo-banner-icon">🔥</span>
+  <span class="promo-banner-text">Masz aktywny kupon rabatowy! Zobacz i pokaż na kasie →</span>
+</a>
+{% endif %}
+
 <section class="hero">
   <div class="wrap hero-inner">
     <div>
