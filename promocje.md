@@ -13,6 +13,7 @@ description: "Aktualne kupony rabatowe misz-masz — pokaż na kasie i odbierz z
   </div>
 </section>
 
+
 <section>
   <div class="wrap">
     {% assign dzisiaj = "now" | date: "%Y-%m-%d" %}
