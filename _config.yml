@@ -17,7 +17,7 @@ address_line2: "22-120 Wojsławice"
 formspree_id: "https://formspree.io/f/xvzjlaoy"
 
 # Godziny otwarcia pobierane automatycznie z Google Business Profile — patrz README.md
-google_places_api_key: "TWOJ_KLUCZ_API"
+google_places_api_key: "AIzaSyC7tZSPqZv45Z2M0GPAZHb8DUJ8uXAecJM"
 google_place_id: "ChIJDULsUo9_I0cR0AdIRDPTeMs"
 
 markdown: kramdown
