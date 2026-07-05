@@ -3,7 +3,7 @@
 #
 # rabat     -> np. "5%", "10%", "2 zł"
 # kategoria -> np. "Cały asortyment", "Artykuły elektryczne"
-# wygasa    -> data w formacie RRRR-MM-DD. Po tej dacie kupon sam zniknie ze strony.
+# wygasa    -> data w formacie RRRR-MM-DD. Po tej dacie kupon sam zniknie ze strony. 
 #              Kupon jest widoczny do KOŃCA podanego dnia (włącznie).
 
 - tytul: "Cały asortyment"
