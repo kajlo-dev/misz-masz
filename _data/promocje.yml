@@ -1,0 +1,17 @@
+# Kupony rabatowe misz-masz
+# Każdy kupon zaczyna się od "- tytul:" — skopiuj cały blok, żeby dodać nowy.
+#
+# rabat     -> np. "5%", "10%", "2 zł"
+# kategoria -> np. "Cały asortyment", "Artykuły elektryczne"
+# wygasa    -> data w formacie RRRR-MM-DD. Po tej dacie kupon sam zniknie ze strony.
+#              Kupon jest widoczny do KOŃCA podanego dnia (włącznie).
+
+- tytul: "Cały asortyment"
+  rabat: "5%"
+  opis: "Pokaż ten ekran przy kasie, a dostaniesz rabat na wszystko, co kupujesz."
+  wygasa: "2026-07-07"
+
+- tytul: "Artykuły elektryczne"
+  rabat: "10%"
+  opis: "Pokaż ten ekran przy kasie — rabat obowiązuje na wybrane artykuły elektryczne."
+  wygasa: "2026-07-08"
