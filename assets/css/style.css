@@ -720,6 +720,26 @@ form.contact-form {
   color: var(--grey-trim);
   padding: 12px 16px 20px;
    }
+.coupon-empty {
+  text-align: center;
+  background: var(--white);
+  border: 4px dashed var(--navy);
+  border-radius: var(--radius);
+  padding: 60px 30px;
+  margin-top: 20px;
+}
+.coupon-empty-icon {
+  font-size: 3.2rem;
+  display: block;
+  margin-bottom: 14px;
+}
+.coupon-empty h2 { margin-bottom: 10px; }
+.coupon-empty p {
+  font-size: 1.05rem;
+  color: var(--ink);
+  margin-bottom: 26px;
+}
+
 /* ============ FOOTER ============ */
 
 .site-footer {
