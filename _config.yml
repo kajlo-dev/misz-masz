@@ -1,0 +1,33 @@
+title: "misz-masz"
+tagline: "Sklep wielobranżowy • Wojsławice, Rynek 39"
+description: >-
+  misz-masz to sklep wielobranżowy w Wojsławicach, na samym rynku.
+  Chemia gospodarcza, kosmetyki, ziemia do kwiatów, drobne AGD,
+  akcesoria GSM i drobiazgi z druku 3D — krainy 1000 i jednego drobiazgu.
+url: "https://misz-masz.cc"
+baseurl: ""
+
+email: sklep@misz-masz.cc
+phone: "+48 570 357 621"
+phone_display: "+48 570 357 621"
+address_line1: "Rynek 39"
+address_line2: "22-120 Wojsławice"
+
+# Podmień na swój formspree endpoint (formspree.io) — patrz README.md
+formspree_id: "https://formspree.io/f/TWOJ_ID"
+
+# Godziny otwarcia pobierane automatycznie z Google Business Profile — patrz README.md
+google_places_api_key: "TWOJ_KLUCZ_API"
+google_place_id: "ChIJDULsUo9_I0cR0AdIRDPTeMs"
+
+markdown: kramdown
+permalink: /:title/
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
