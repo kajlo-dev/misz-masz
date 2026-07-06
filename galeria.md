@@ -39,16 +39,4 @@ description: "Zdjęcia ze sklepu misz-masz w Wojsławicach — wnętrze i witryn
       {% endif %}
     </div>
   </div>
-</section>              <figcaption>misz-masz · Rynek 39</figcaption>
-            </figure>
-          {% endfor %}
-        {% else %}
-          <p class="gallery-empty">
-            Zdjęcia wkrótce! Wrzuć pliki do <code>/assets/images/galeria/</code>,
-            a pojawią się tutaj automatycznie.
-          </p>
-        {% endif %}
-      </div>
-    </div>
-  </div>
 </section>
