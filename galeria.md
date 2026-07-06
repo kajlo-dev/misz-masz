@@ -30,7 +30,12 @@ description: "Zdjęcia ze sklepu misz-masz w Wojsławicach — wnętrze i witryn
           </div>
           <button class="carousel-arrow carousel-next" aria-label="Następne zdjęcie" data-carousel-next>›</button>
         </div>
-        <p class="carousel-hint">Przesuń palcem albo użyj strzałek, żeby zobaczyć więcej zdjęć</p>
+        <p class="carousel-hint">Stuknij zdjęcie, żeby powiększyć</p>
+
+        <div class="lightbox" id="lightbox">
+          <button class="lightbox-close" id="lightbox-close" aria-label="Zamknij powiększenie">×</button>
+          <img src="" alt="Powiększone zdjęcie ze sklepu misz-masz" id="lightbox-img">
+        </div>
       {% else %}
         <p class="gallery-empty">
           Zdjęcia wkrótce! Wrzuć pliki do <code>/assets/images/galeria/</code>,
