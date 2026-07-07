@@ -602,10 +602,16 @@ form.contact-form {
 
 .carousel-slide {
   flex: 0 0 100%;
+  width: 100%;
   min-width: 0;
   display: flex;
   justify-content: center;
 }
+
+/* obrót polaroidu wg pozycji slajdu, nie samego .polaroid (który jest jedynym dzieckiem, więc nth-child na nim zawsze trafiał w 1) */
+.carousel-slide:nth-child(3n+1) .polaroid { transform: rotate(-3deg); }
+.carousel-slide:nth-child(3n+2) .polaroid { transform: rotate(2deg); }
+.carousel-slide:nth-child(3n+3) .polaroid { transform: rotate(-1deg); }
 
 .carousel-controls {
   display: flex;
@@ -648,6 +654,15 @@ form.contact-form {
   font-size: 0.8rem;
   color: var(--navy);
   margin-top: 14px;
+}
+
+/* domyślnie (i jako fallback) tekst o muśnięciu; na urządzeniach z myszką (hover + dokładny wskaźnik) zamieniamy na tekst o kliknięciu */
+.carousel-hint-desktop { display: none; }
+.carousel-hint-mobile { display: block; }
+
+@media (hover: hover) and (pointer: fine) {
+  .carousel-hint-mobile { display: none; }
+  .carousel-hint-desktop { display: block; }
 }
 
 @media (max-width: 600px) {
@@ -707,9 +722,6 @@ form.contact-form {
   box-shadow: 0 8px 18px rgba(0,0,0,0.25);
   position: relative;
 }
-.polaroid:nth-child(3n+1) { transform: rotate(-3deg); }
-.polaroid:nth-child(3n+2) { transform: rotate(2deg); }
-.polaroid:nth-child(3n+3) { transform: rotate(-1deg); }
 .polaroid:hover { transform: rotate(0deg) scale(1.03); z-index: 2; transition: transform 0.15s ease; }
 
 .polaroid img {

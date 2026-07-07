@@ -23,7 +23,7 @@ description: "Zdjęcia ze sklepu misz-masz w Wojsławicach — wnętrze i witryn
             {% for photo in photos %}
               <div class="carousel-slide">
                 <figure class="polaroid">
-                  <img src="{{ photo.path | relative_url }}" alt="Zdjęcie ze sklepu misz-masz" loading="lazy">
+                  <img src="{{ photo.path | relative_url }}" alt="Zdjęcie ze sklepu misz-masz">
                   <figcaption>misz-masz · Rynek 39</figcaption>
                 </figure>
               </div>
@@ -35,7 +35,8 @@ description: "Zdjęcia ze sklepu misz-masz w Wojsławicach — wnętrze i witryn
             <button class="carousel-arrow carousel-next" aria-label="Następne zdjęcie" data-carousel-next>›</button>
           </div>
         </div>
-        <p class="carousel-hint">Przesuń palcem albo stuknij zdjęcie, żeby powiększyć</p>
+        <p class="carousel-hint carousel-hint-mobile">Przesuń palcem albo stuknij zdjęcie, żeby powiększyć</p>
+        <p class="carousel-hint carousel-hint-desktop">Kliknij zdjęcie, żeby powiększyć — strzałkami przełączaj kolejne</p>
 
         <div class="lightbox" id="lightbox">
           <button class="lightbox-close" id="lightbox-close" aria-label="Zamknij powiększenie">×</button>
