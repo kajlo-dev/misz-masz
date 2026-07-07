@@ -13,18 +13,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Baloo+2:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-
-  {% if site.google_analytics %}
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', '{{ site.google_analytics }}');
-  </script>
-  {% endif %}
 </head>
-<body data-places-key="{{ site.google_places_api_key }}" data-place-id="{{ site.google_place_id }}">
+<body data-places-key="{{ site.google_places_api_key }}" data-place-id="{{ site.google_place_id }}" data-ga-id="{{ site.google_analytics }}">
 
   {% include header.html %}
 
@@ -34,8 +24,15 @@
 
   {% include footer.html %}
 
+  {% if site.google_analytics %}
+    {% include cookie-banner.html %}
+  {% endif %}
+
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/hours.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/gallery.js' | relative_url }}"></script>
+  {% if site.google_analytics %}
+  <script src="{{ '/assets/js/cookies.js' | relative_url }}"></script>
+  {% endif %}
 </body>
 </html>
