@@ -28,6 +28,9 @@ google_place_id: "ChIJDULsUo9_I0cR0AdIRDPTeMs"
 # Wklej swój z panelu Google Analytics (Administracja → Strumienie danych → Twoja strona)
 google_analytics: "G-STFT028MBZ"
 
+# Weryfikacja własności domeny w Google Search Console (meta tag)
+google_site_verification: "u-v4NXBGrthStZ3nrwHhmz1FXUDYQjXXPJprVlqceyo"
+
 markdown: kramdown
 permalink: /:title/
 
