@@ -21,7 +21,7 @@ description: "Zdjęcia ze sklepu misz-masz w Wojsławicach — wnętrze i witryn
         <div class="carousel" id="carousel">
           <div class="carousel-track" id="carousel-track">
             {% for photo in photos %}
-              <div class="carousel-slide">
+              <div class="carousel-slide{% if forloop.first %} is-active{% endif %}">
                 <figure class="polaroid">
                   <img src="{{ photo.path | relative_url }}" alt="Zdjęcie ze sklepu misz-masz">
                   <figcaption>misz-masz · Rynek 39</figcaption>

@@ -593,19 +593,30 @@ form.contact-form {
 }
 
 .carousel-track {
-  display: flex;
+  position: relative;
   width: 100%;
   overflow: hidden;
   touch-action: pan-y;
-  transition: transform 0.35s ease;
 }
 
+/* każdy slajd leży w tym samym miejscu (inset:0); JS przełącza tylko klasę is-active,
+   dzięki czemu zmiana zdjęcia nie zależy od wyliczania szerokości/transform całego toru */
 .carousel-slide {
-  flex: 0 0 100%;
-  width: 100%;
-  min-width: 0;
+  position: absolute;
+  inset: 0;
   display: flex;
   justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.carousel-slide.is-active {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 /* obrót polaroidu wg pozycji slajdu, nie samego .polaroid (który jest jedynym dzieckiem, więc nth-child na nim zawsze trafiał w 1) */

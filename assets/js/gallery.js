@@ -19,7 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
   var lightboxClose = document.getElementById("lightbox-close");
 
   function render() {
-    track.style.transform = "translateX(-" + (current * 100) + "%)";
+    slides.forEach(function (slide, i) {
+      slide.classList.toggle("is-active", i === current);
+    });
     if (counter) counter.textContent = (current + 1) + " / " + total;
     if (lightbox && lightbox.classList.contains("open")) {
       updateLightboxImage();
