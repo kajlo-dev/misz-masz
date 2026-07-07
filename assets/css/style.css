@@ -215,6 +215,10 @@ img { max-width: 100%; display: block; }
   }
   .nav-toggle-input:checked ~ .site-nav { display: flex; }
   .nav-cta { align-self: flex-start; }
+  .brand { gap: 8px; }
+  .brand-badge { width: 44px; height: 44px; }
+  .brand-name { font-size: 1.2rem; }
+  .brand-sub { font-size: 0.58rem; letter-spacing: 0.08em; }
 }
 
 /* ============ HERO ============ */
@@ -598,6 +602,7 @@ form.contact-form {
 
 .carousel-slide {
   flex: 0 0 100%;
+  min-width: 0;
   display: flex;
   justify-content: center;
 }
@@ -646,7 +651,16 @@ form.contact-form {
 }
 
 @media (max-width: 600px) {
-  .carousel-arrow { width: 38px; height: 38px; font-size: 1.3rem; }
+  .carousel-arrow { width: 44px; height: 44px; font-size: 1.3rem; }
+}
+
+@media (max-width: 480px) {
+  .wrap { padding: 0 16px; }
+  section { padding: 44px 0; }
+  .hero { padding: 48px 0 64px; }
+  .page-hero { padding: 40px 0 44px; }
+  .cta-banner { padding: 36px 0; }
+  .gallery-board { padding: 24px 14px; }
 }
 
 .lightbox {
@@ -687,6 +701,7 @@ form.contact-form {
 }
 .lightbox-close:hover { background: var(--red-deep); }
 .polaroid {
+  width: 100%;
   background: var(--white);
   padding: 12px 12px 46px;
   box-shadow: 0 8px 18px rgba(0,0,0,0.25);

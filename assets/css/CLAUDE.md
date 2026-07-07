@@ -1,0 +1,1 @@
+Zawsze odpowiadaj po polsku, niezależnie od pytań czy kodu. Pamiętaj o komentarzach w kodzie. 
