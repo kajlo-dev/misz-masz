@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }} | Wojsławice</title>
-  <meta name="description" content="{{ page.description | default: site.description }}">
+  {% seo title=false %}
 
   <link rel="icon" href="{{ '/assets/images/logo.png' | relative_url }}">
 
@@ -13,6 +13,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Baloo+2:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "{{ site.title }}",
+    "image": "{{ site.logo | absolute_url }}",
+    "url": "{{ site.url }}{{ site.baseurl }}/",
+    "telephone": "{{ site.phone }}",
+    "priceRange": "$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ site.address_line1 }}",
+      "addressLocality": "Wojsławice",
+      "postalCode": "{{ site.address_line2 | split: ' ' | first }}",
+      "addressCountry": "PL"
+    },
+    "sameAs": [
+      "https://www.google.com/maps/place/?q=place_id:{{ site.google_place_id }}"
+    ]
+  }
+  </script>
 </head>
 <body data-places-key="{{ site.google_places_api_key }}" data-place-id="{{ site.google_place_id }}" data-ga-id="{{ site.google_analytics }}">
 

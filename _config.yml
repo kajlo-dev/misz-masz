@@ -6,6 +6,10 @@ description: >-
   akcesoria GSM i drobiazgi z druku 3D — krainy 1000 i jednego drobiazgu.
 url: "https://misz-masz.cc"
 baseurl: ""
+lang: "pl_PL"
+logo: "/assets/images/logo.png"
+twitter:
+  card: summary
 
 email: sklep@misz-masz.cc
 phone: "+48 570 357 621"

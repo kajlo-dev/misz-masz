@@ -18,10 +18,28 @@ document.addEventListener("DOMContentLoaded", function () {
   var lightboxImg = document.getElementById("lightbox-img");
   var lightboxClose = document.getElementById("lightbox-close");
 
+  // zdjęcia poza pierwszym mają tylko data-src (patrz galeria.md) — realny src
+  // dostają dopiero gdy stają się aktualne albo sąsiadują z aktualnym, żeby strona
+  // nie musiała od razu ściągać wszystkich 17 zdjęć
+  function loadSlide(index) {
+    var img = slides[index] && slides[index].querySelector("img");
+    if (img && img.dataset.src) {
+      img.src = img.dataset.src;
+      delete img.dataset.src;
+    }
+  }
+
+  function preloadAround(index) {
+    loadSlide(index);
+    loadSlide((index + 1) % total);
+    loadSlide((index - 1 + total) % total);
+  }
+
   function render() {
     slides.forEach(function (slide, i) {
       slide.classList.toggle("is-active", i === current);
     });
+    preloadAround(current);
     if (counter) counter.textContent = (current + 1) + " / " + total;
     if (lightbox && lightbox.classList.contains("open")) {
       updateLightboxImage();
