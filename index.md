@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: "Sklep wielobranżowy Wojsławice, Rynek 39"
 description: "misz-masz — sklep wielobranżowy w Wojsławicach, Rynek 39. Chemia, kosmetyki, ziemia, drobne AGD, GSM i drobiazgi z druku 3D."
 ---
 
